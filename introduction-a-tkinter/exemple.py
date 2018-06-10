@@ -2,20 +2,22 @@
 
 import Tkinter as tk
 
-fenetre = tk.Tk()
-fenetre.title('Convertisseur binaire')
+FENETRE = tk.Tk()
+FENETRE.title('Convertisseur binaire')
 
-entree = tk.Entry(fenetre)
-entree.pack()
+ENTREE = tk.Entry(FENETRE)
+ENTREE.pack()
 
-reponse = tk.Label(fenetre, text='0b')
-reponse.pack()
+REPONSE = tk.Label(FENETRE, text='0b')
+REPONSE.pack()
+
 
 def convertir():
-	"""Convertir en binaire le nombre entré et afficher le résultat."""
-	reponse.config(text=bin(int(entree.get())))
+    """Convertir en binaire le nombre entré et afficher le résultat."""
+    REPONSE.config(text=bin(int(ENTREE.get())))
 
-bouton = tk.Button(fenetre, text='Convertir', command=convertir)
-bouton.pack()
 
-fenetre.mainloop()
+BOUTON = tk.Button(FENETRE, text='Convertir', command=convertir)
+BOUTON.pack()
+
+FENETRE.mainloop()
