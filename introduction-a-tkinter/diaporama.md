@@ -79,7 +79,7 @@ bouton.pack()
 
 # Exemple de programme complet
 
-*Code disponible sur mon [Github](https://github.com/Suponell/conferences/introduction-a-tkinter)*
+*Code disponible sur mon [Github](https://github.com/Suponell/conferences/tree/master/introduction-a-tkinter)*
 
 ---
 
