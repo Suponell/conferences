@@ -17,15 +17,15 @@ import Tkinter as tk
 # Créer une fenêtre
 
 ```python
-fenetre = tk.Tk()
+FENETRE = tk.Tk()
 
 # Configuration optionnelle
-fenetre.title('Application tkinter')
-fenetre.geometry(640, 360)  # Taille de la fenêtre
+FENETRE.title('Application tkinter')
+FENETRE.geometry(640, 360)  # Taille de la fenêtre
 
 # TODO: Définir les objets
 
-fenetre.mainloop()
+FENETRE.mainloop()
 ```
 
 ---
@@ -39,8 +39,8 @@ fenetre.mainloop()
 ## Afficher du texte
 
 ```python
-titre = tk.Label(fenetre, text='Application tkinter')
-titre.pack()
+TITRE = tk.Label(FENETRE, text='Application tkinter')
+TITRE.pack()
 ```
 
 ---
@@ -52,12 +52,12 @@ titre.pack()
 ```python
 from time import sleep
 
-nom = tk.Entry(fenetre)
-nom.pack()
+ENTREE = tk.Entry(FENETRE)
+ENTREE.pack()
 
 sleep(1)
 
-print nom.get()
+print ENTREE.get()
 ```
 
 ---
@@ -70,9 +70,9 @@ print nom.get()
 def calculer():
 	print 3 * 5
 
-bouton = Button(fenetre, text='Calculer',
+BOUTON = Button(FENETRE, text='Calculer',
 		  command=calculer)
-bouton.pack()
+BOUTON.pack()
 ```
 
 ---
@@ -84,23 +84,39 @@ bouton.pack()
 ---
 
 ```python
+"""Application de conversion en binaire avec interface
+graphique.
+"""
+
 import Tkinter as tk
 
-fenetre = tk.Tk()
-fenetre.title('Convertisseur binaire')
+FENETRE = tk.Tk()
+FENETRE.title('Convertisseur binaire')
 
-entree = tk.Entry(fenetre)
-entree.pack()
+ENTREE = tk.Entry(FENETRE)
+ENTREE.pack()
 
-reponse = tk.Label(fenetre, text='0b')
-reponse.pack()
+REPONSE = tk.Label(FENETRE, text='0b')
+REPONSE.pack()
+````
 
+---
+
+```python
 def convertir():
-	reponse.config(text=bin(int(entree.get())))
+    """Convertir en binaire le nombre entré et afficher
+    le résultat.
+    """
+    REPONSE.config(text=bin(int(ENTREE.get())))
 
-bouton = tk.Button(fenetre, text='Convertir',
-		   command=convertir)
-bouton.pack()
 
-fenetre.mainloop()
+BOUTON = tk.Button(FENETRE, text='Convertir',
+	           command=convertir)
+BOUTON.pack()
+
+FENETRE.mainloop()
 ```
+
+---
+
+# Merci !
